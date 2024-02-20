@@ -1,13 +1,23 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/homepage/HomePage";
+import BooksPage from "./pages/bookspage/BooksPage";
+import BookDetails from "./pages/bookdetailspage/BookDetails";
 
-function App() {
+const App = () => {
   return (
     <>
-      <div className="bg-red-200">
-        <h1 className="text-3xl font-bold underline ">Hello world!</h1>
-      </div>
+      <Router>
+        <div className="bg-red-200">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/books" element={<BooksPage />} />
+            <Route path="/book-details/:id" element={<BookDetails />} />
+          </Routes>
+        </div>
+      </Router>
     </>
   );
-}
+};
 
 export default App;
