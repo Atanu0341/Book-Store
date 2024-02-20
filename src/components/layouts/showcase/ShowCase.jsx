@@ -7,7 +7,7 @@ const ShowCase = () => {
   return (
     <section className="relative h-screen flex items-center justify-center bg-cover"
       style={{ backgroundImage: `url(${ShowCasebg})` }}>
-      <Navbar />
+      <Navbar darkTheme={false} />
       <div className="absolute inset-0 bg-black opacity-40"></div>
       <div className="text-white text-center z-10">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
@@ -16,7 +16,7 @@ const ShowCase = () => {
         <p className="text-lg md:text-xl lg:text-2xl">
           Buy quality books at cheaper price
         </p>
-        <SearchInputForm />
+        <SearchInputForm darkTheme={true}/>
       </div>
     </section>
   );
