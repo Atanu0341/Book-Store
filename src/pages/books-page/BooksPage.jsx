@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../../components/layouts/navbar/Navbar";
 import Footer from "../../components/layouts/footer/Footer";
 import SearchInputForm from "../../components/forms/searchInputForm/SearchInputForm";
-import ProductListingAll from "../../components/layouts/productlistingall/ProductListingAll";
+import ProductListingAll from "../../components/layouts/product-listing-all/ProductListingAll";
 
 const BooksPage = () => {
   return (
