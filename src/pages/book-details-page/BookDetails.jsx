@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../components/layouts/navbar/Navbar";
 import DetailSection from "../../components/layouts/details-section/DetailsSection";
+import Footer from "../../components/layouts/footer/Footer";
 
 const BookDetails = () => {
   return (
@@ -8,6 +9,7 @@ const BookDetails = () => {
       <Navbar darkTheme={true} />
 
       <DetailSection />
+      <Footer />
     </section>
   );
 };
