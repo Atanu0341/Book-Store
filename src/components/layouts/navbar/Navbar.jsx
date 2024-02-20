@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ darkTheme }) => {
   return (
@@ -8,19 +9,15 @@ const Navbar = ({ darkTheme }) => {
           Book<span className="text-[#fb995d]">World</span>
         </a>
 
-        <nav className="">
-          <a
-            href="#"
-            className="text-white text-xl pl-5 transition duration-150 ease-in hover:text-[#fb995d]"
-          >
+        <nav>
+          <Link to="/"
+            className="text-white text-xl pl-5 transition duration-150 ease-in hover:text-[#fb995d]">
             Home
-          </a>
-          <a
-            href="#"
-            className="text-white text-xl pl-5 transition duration-150 ease-in hover:text-[#fb995d]"
-          >
+          </Link>
+          <Link to="/books"
+            className="text-white text-xl pl-5 transition duration-150 ease-in hover:text-[#fb995d]">
             Books
-          </a>
+          </Link>
         </nav>
       </div>
     </section>
