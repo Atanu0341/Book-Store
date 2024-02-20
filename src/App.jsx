@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
       <Router>
-        <div className="bg-red-200">
+        <div className="">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/books" element={<BooksPage />} />
