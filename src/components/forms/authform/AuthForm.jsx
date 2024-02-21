@@ -49,6 +49,7 @@ const AuthForm = ({ buttonName }) => {
             className="w-full p-4 text-base rounded-lg outline-none border-2 border-black"
             value={username}
             onChange={(event) => setUsername(event.target.value)}
+            required
           />
         </div>
       )}
@@ -60,6 +61,7 @@ const AuthForm = ({ buttonName }) => {
           className="w-full p-4 text-base rounded-lg outline-none border-2 border-black"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
+          required
         />
       </div>
       <div className="pt-4">
@@ -70,6 +72,7 @@ const AuthForm = ({ buttonName }) => {
           className="w-full p-4 text-base rounded-lg outline-none border-2 border-black"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
+          required
         />
       </div>
       <div className="pt-4">
