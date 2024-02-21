@@ -1,5 +1,6 @@
 import React from "react";
 import ProductListingCard from "../../cards/product-listing-card/ProductListingCard";
+import { BookData } from "../../../util/BookData";
 
 const ProductListing = () => {
   return (
@@ -11,10 +12,9 @@ const ProductListing = () => {
         </h2>
 
         <div className="pt-11 flex flex-col lg:flex-row justify-between items-center gap-4">
-          <ProductListingCard />
-          <ProductListingCard />
-          <ProductListingCard />
-          <ProductListingCard />
+          {BookData.slice(0, 4).map((book) => {
+            return <ProductListingCard key={book.id} bookData={book} />;
+          })}
         </div>
       </div>
     </div>
