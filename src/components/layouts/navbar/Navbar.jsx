@@ -3,8 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { UserContext } from "../../../App";
-import Cart from "../../../assets/cart.svg";
 import { getAuth, signOut } from "firebase/auth";
+import Cart from "../../../assets/cart.svg";
 import app from "../../../firebase/Firebase";
 
 const Navbar = ({ darkTheme, darkText }) => {
