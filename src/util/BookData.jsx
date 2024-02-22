@@ -168,5 +168,25 @@ export const BookData = [
         language: "English",
         author_name: "J.K. Rowling",
         price: "431",
+    },
+    {
+        id: 17,
+        book_name: "The Great Gatsby",
+        book_description: "The Great Gatsby is a novel written by American author F. Scott Fitzgerald. It follows a cast of characters living in the fictional town of West Egg on prosperous Long Island in the summer of 1922.",
+        book_url: "https://m.media-amazon.com/images/I/817+192hZyS._SL1500_.jpg",
+        print_length: "180 pages",
+        language: "English",
+        author_name: "F. Scott Fitzgerald",
+        price: "220",
+    },
+    {
+        id: 18,
+        book_name: "1984",
+        book_description: "George Orwell's dystopian masterpiece, Nineteen Eighty-Four is perhaps the most pervasively influential book of the twentieth century, making famous Big Brother, newspeak and Room 101.",
+        book_url: "https://m.media-amazon.com/images/I/91qK2DSAXSL._SL1500_.jpg",
+        print_length: "328 pages",
+        language: "English",
+        author_name: "George Orwell",
+        price: "198",
     }
 ]
