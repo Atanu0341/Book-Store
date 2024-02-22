@@ -57,7 +57,7 @@ const Footer = () => {
         </form>
 
         <p className="text-white pt-8 text-base">
-          &copy; 2023 BookWorld. All Rights Reserved.
+          &copy; 2024 BookWorld. All Rights Reserved.
         </p>
       </div>
     </section>
