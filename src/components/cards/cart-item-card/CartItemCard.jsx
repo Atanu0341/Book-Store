@@ -2,15 +2,12 @@ import React, { useContext } from "react";
 import { CartContext } from "../../../App";
 
 const CartItemCard = ({ bookData }) => {
-
-    const {cartItems, setCartItems} = useContext(CartContext) 
+  const { cartItems, setCartItems } = useContext(CartContext);
 
   const handleRemove = () => {
     console.log(bookData.id);
-    setCartItems(cartItems.filter((item)=> item.id !== bookData.id));
-
+    setCartItems(cartItems.filter((item) => item.id !== bookData.id));
   };
-
 
   return (
     <section className="flex my-8 p-8 border-2 border-slate-400 rounded-lg">
