@@ -16,7 +16,8 @@ const App = () => {
   const auth = getAuth(app);
 
   const [authenticatedUser, setAuthenticatedUser] = useState(null);
-  const [cartItems, setCartItems] = useState({});
+  const [cartItems, setCartItems] = useState([]);
+  const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -28,16 +29,20 @@ const App = () => {
     });
   }, []);
 
-  // useEffect(() => {
-  //   console.log(cartItems)
-  // }, [cartItems])
-  
+  useEffect(() => {
+    let total = 0;
+    cartItems.forEach((item) => {
+      total = total + parseInt(item.price);
+    });
+
+    setTotalAmount(total)
+  }, [cartItems]);
 
   return (
     <>
       <Router>
         <UserContext.Provider value={authenticatedUser}>
-          <CartContext.Provider value={{ cartItems, setCartItems }}>
+          <CartContext.Provider value={{ cartItems, totalAmount, setCartItems }}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/books" element={<BooksPage />} />
