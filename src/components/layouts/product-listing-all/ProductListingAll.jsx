@@ -1,9 +1,8 @@
 import React from "react";
-import ProductListingCard from "../../cards/product-listing-card/ProductListingCard";
 import { BookData } from "../../../util/BookData";
+import ProductListingCard from "../../cards/product-listing-card/ProductListingCard";
 
 const ProductListingAll = () => {
-  console.log(BookData);
   return (
     <section className="pt-20">
       <div className="w-11/12 m-auto ">
