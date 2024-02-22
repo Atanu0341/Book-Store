@@ -149,6 +149,15 @@ const Navbar = ({ darkTheme, darkText }) => {
           menuOpen ? "block" : "hidden"
         } bg-slate-700 rounded-lg w-3/12 p-4`}
       >
+        {user && (
+          <span
+            className={`block mb-3 text-xl transition duration-150 ease-in hover:text-[#fb995d] cursor-pointer ${
+              darkText ? "text-black" : "text-white"
+            }`}
+          >
+            Hello, {user.displayName}
+          </span>
+        )}
         <Link
           to="/"
           className={`block mb-3 text-xl transition duration-150 ease-in hover:text-[#fb995d] ${
@@ -165,7 +174,8 @@ const Navbar = ({ darkTheme, darkText }) => {
         >
           Books
         </Link>
-        <a onClick={handleLogout}
+        <a
+          onClick={handleLogout}
           className={`block mb-3 cursor-pointer text-xl transition duration-150 ease-in hover:text-[#fb995d] ${
             darkText ? "text-red-100" : "text-white"
           }`}
@@ -179,6 +189,15 @@ const Navbar = ({ darkTheme, darkText }) => {
 
       {/* Regular vertical menu for larger screens */}
       <nav className="hidden lg:flex lg:justify-center lg:items-center mt-4 lg:mt-0">
+        {user && (
+          <span
+            className={`text-xl pl-5 transition duration-150 ease-in hover:text-[#fb995d] cursor-pointer ${
+              darkText ? "text-black" : "text-white"
+            }`}
+          >
+            Hello, {user.displayName}
+          </span>
+        )}
         <Link
           to="/"
           className={`text-xl pl-5 transition duration-150 ease-in hover:text-[#fb995d] ${
@@ -219,9 +238,7 @@ const Navbar = ({ darkTheme, darkText }) => {
       <div className="w-11/12 m-auto flex justify-between items-center relative">
         <a href="#" className="text-2xl font-bold text-white">
           Book
-          <span className={`text-[${darkText ? "black" : "white"}]`}>
-            World
-          </span>
+          <span className="text-[#fb995d]">World</span>
         </a>
 
         {user ? showLogoutAndCart : showLoginandSignUp}
