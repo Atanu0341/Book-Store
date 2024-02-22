@@ -1,6 +1,6 @@
 import React from "react";
-import ProductListingCard from "../../cards/product-listing-card/ProductListingCard";
 import { BookData } from "../../../util/BookData";
+import ProductListingCard from "../../cards/product-listing-card/ProductListingCard";
 
 const ProductListing = () => {
   return (
