@@ -50,7 +50,7 @@ const Navbar = ({ darkTheme, darkText }) => {
       <nav
         className={`lg:hidden absolute top-16 right-0 ${
           menuOpen ? "block" : "hidden"
-        } bg-slate-700 rounded-lg w-3/12 p-4`}
+        } bg-slate-700 rounded-lg w-3/12 pl-8 pr-20 md:pr-10 py-4`}
       >
         <Link
           to="/"
