@@ -1,6 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Footer = () => {
+  const form = useRef();
+  const serviceId = "service_75zvu2f";
+  const templateId = "template_si3e3qb";
+  const publicKey = "OoVQhHafjiNYWu591";
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Get the form data and convert it to an object
+    const formData = new FormData(form.current);
+    const params = {};
+    formData.forEach((value, key) => {
+      params[key] = value;
+    });
+
+    emailjs
+      .send(serviceId, templateId, params, publicKey)
+      .then((response) => {
+        console.log(response.text);
+      })
+      .catch((error) => {
+        console.log(error.text);
+      });
+
+    e.target.reset();
+  };
+
   return (
     <section className="bg-slate-900 mt-[5%] py-12">
       <div className="w-11/12 m-auto">
@@ -8,7 +36,7 @@ const Footer = () => {
           If you have any queries feel free to ask here.
         </h2>
 
-        <form className="pt-12 w-2/4">
+        <form className="pt-12 w-2/4" ref={form} onSubmit={handleSubmit}>
           <div className="pt-4">
             <label htmlFor="name" className="text-white inline-block pb-2">
               Name:
@@ -51,7 +79,7 @@ const Footer = () => {
             <input
               type="submit"
               value="Submit"
-              className="text-white bg-[#fa7727] hover:bg-[#f08f53] transition duration-150 ease-in py-2 px-8 inline-block rounded-lg"
+              className="text-white cursor-pointer bg-[#fa7727] hover:bg-[#f08f53] transition duration-150 ease-in py-2 px-8 inline-block rounded-lg"
             />
           </div>
         </form>
