@@ -8,6 +8,8 @@ import SignUp from "./pages/sign-up/SignUp";
 import Login from "./pages/login/Login";
 import app from "./firebase/Firebase";
 import CartPage from "./components/layouts/cart-page/CartPage";
+import ScrollToTop from "./components/util/ScrollToTop";
+import SearchPage from "./pages/search-page/SearchPage";
 
 export const UserContext = createContext({});
 export const CartContext = createContext([]);
@@ -35,24 +37,29 @@ const App = () => {
       total = total + parseInt(item.price);
     });
 
-    setTotalAmount(total)
+    setTotalAmount(total);
   }, [cartItems]);
 
   return (
     <>
       <Router>
-        <UserContext.Provider value={authenticatedUser}>
-          <CartContext.Provider value={{ cartItems, totalAmount, setCartItems }}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/books" element={<BooksPage />} />
-              <Route path="/cart" element={<CartPage />} />
-              <Route path="/book-details/:id" element={<BookDetails />} />
-              <Route path="/signup" element={<SignUp />} />
-              <Route path="/login" element={<Login />} />
-            </Routes>
-          </CartContext.Provider>
-        </UserContext.Provider>
+        <ScrollToTop>
+          <UserContext.Provider value={authenticatedUser}>
+            <CartContext.Provider
+              value={{ cartItems, totalAmount, setCartItems }}
+            >
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/books" element={<BooksPage />} />
+                <Route path="/cart" element={<CartPage />} />
+                <Route path="/search" element={<SearchPage />} />
+                <Route path="/book-details/:id" element={<BookDetails />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/login" element={<Login />} />
+              </Routes>
+            </CartContext.Provider>
+          </UserContext.Provider>
+        </ScrollToTop>
       </Router>
     </>
   );
