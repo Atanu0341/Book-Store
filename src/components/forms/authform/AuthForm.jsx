@@ -75,7 +75,7 @@ const AuthForm = ({ buttonName }) => {
         <input
           type="submit"
           value={buttonName}
-          className="inline-block cursor-pointer py-4 px-8 w-2/5 sm:w-2/4 md:w-2/5 lg:w-[30%] xl:w-1/5 rounded-lg text-white bg-slate-800 hover:bg-slate-700 transition duration-150 ease-in"
+          className="inline-block cursor-pointer py-4 px-8 w-full sm:w-2/4 md:w-2/5 lg:w-[30%] xl:w-1/5 rounded-lg text-white bg-slate-800 hover:bg-slate-700 transition duration-150 ease-in"
         />
       </div>
     </form>
