@@ -85,8 +85,9 @@ const Footer = () => {
         </form>
 
         <p className="text-white pt-8 text-base">
-          &copy; 2024 BookWorld. All Rights Reserved.
+          &copy; 2024 BookWorld. All Rights Reserved. Made By - <a href="https://github.com/Atanu0341/Book-Store"> Atanu Majumder</a> 
         </p>
+
       </div>
     </section>
   );
